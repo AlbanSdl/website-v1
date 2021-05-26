@@ -89,6 +89,10 @@ window.onload = () => {
         window.localStorage.clear();window.sessionStorage.clear()
         this.classList.add('disabled');Ripple.remove(this)
         console.info('Local & session storage cleared')
+        const cookies = document.cookie.split(';')
+        for (var i = 0; i < cookies.length; i++) 
+            if (cookies[i].length > 0)
+                document.cookie = `${cookies[i]}=;expires=${new Date(0).toUTCString()}`
     }, {once: true})
     Ripple.init()
     Link.init()
