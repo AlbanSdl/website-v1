@@ -1,0 +1,4 @@
+ErrorDocument 404 /
+AddEncoding gzip .gz
+AddDefaultCharset utf-8
+Options -Indexes
